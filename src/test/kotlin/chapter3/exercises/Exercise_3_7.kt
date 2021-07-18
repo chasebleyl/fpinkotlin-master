@@ -17,32 +17,10 @@ object Exercise_3_7 {
 
     val trace = {
         foldRight(List.of(1, 2, 3), z, f)
-        Cons(
-            1,
-            foldRight(List.of(2, 3), z, f)
-        )
-        Cons(
-            1, Cons(
-                2,
-                foldRight(List.of(3), z, f)
-            )
-        )
-        Cons(
-            1, Cons(
-                2, Cons(
-                    3,
-                    foldRight(List.empty(), z, f)
-                )
-            )
-        )
-        Cons(
-            1, Cons(
-                2, Cons(
-                    3,
-                    Nil
-                )
-            )
-        )
+        Cons(1, foldRight(List.of(2, 3), z, f))
+        Cons(1, Cons(2,foldRight(List.of(3), z, f)))
+        Cons(1, Cons(2, Cons(3,foldRight(List.empty(), z, f))))
+        Cons(1, Cons(2, Cons(3,Nil)))
     }
 }
 
